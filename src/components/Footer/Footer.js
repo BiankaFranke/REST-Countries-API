@@ -4,8 +4,7 @@ import '../../App.css';
 const Footer = () => {
     return (
         <div className='Footer'>
-            <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a>. Coded by <a href="https://github.com/BiankaFranke">Bianka</a>.</p>
+            <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="https://github.com/BiankaFranke">Bianka</a>.</p>
         </div>
     );
 }

@@ -15,7 +15,7 @@ const Country = () => {
         fetch(`${url}/name/${name}`)
           .then(res => res.json())
           .then(data => setCountry(data[0]));
-    }, );
+    }, [name]);
 
     return (
             <div className='country'>

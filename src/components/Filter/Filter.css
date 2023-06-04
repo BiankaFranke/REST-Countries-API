@@ -1,0 +1,11 @@
+.Filter {
+    padding-right: 4rem;
+}
+
+.Filter select {
+    width: 40vw;
+    height: 4rem;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+#searchBtn {
+    border: none;
+    cursor: pointer;
+    background: url("../../img/lupe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2rem;
+    width: 2rem;
+    overflow: hidden;
+    transform: translate(3rem, 0.5rem);
+}
+
+.Search {
+    width: 40vw;
+    height: 4rem;
+    font-size: 1.3rem;
+    border: 5px solid hsl(0, 0%, 98%);
+    padding-left: 4rem;
+}

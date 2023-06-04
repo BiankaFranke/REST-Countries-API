@@ -1,0 +1,24 @@
+.Home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.HomeCountryCard {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0.5rem 2rem;
+}
+
+.HomeFilterSearch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (min-width:599px) {
+    .HomeCountryCard {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

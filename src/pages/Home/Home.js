@@ -9,7 +9,6 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 const Home = () => {
     const [countries, setCountries] = useState([]);
-
     const url = `https://restcountries.com/v3.1`;
 
     const allCountries = async () => {
@@ -19,16 +18,18 @@ const Home = () => {
     }
 
     const getCountryByName = async (name) => {
+        if (name === '') {
+            alert("Please enter a country name!");
+            return;
+        }
+
         const response = await fetch(`${url}/name/${name}`);
-        // if (!response.ok) alert("We cannot find the land. Please check if the name is correct.") && window.location.reload(false);
-        // console.log("We cannot find the land. Please check if the name is correct.");
         const data = await response.json();
         setCountries(data);
     };
 
     const getCountryByRegion = async (regionName) => {
         const response = await fetch(`${url}/region/${regionName}`);
-        console.log('set filter')
         const data = await response.json();
         setCountries(data);
     };

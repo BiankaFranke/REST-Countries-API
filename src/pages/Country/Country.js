@@ -6,7 +6,7 @@ import { useEffect, useState} from "react";
 // IMPORT COMPONENTS
 import BackBtn from '../../components/BackBtn/BackBtn';
 
-const Country = () => {
+const Country = (props) => {
     const url = `https://restcountries.com/v3.1`;
     const [country, setCountry] = useState({});
     let { name } = useParams();
@@ -18,7 +18,7 @@ const Country = () => {
     }, [name]);
 
     return (
-            <div className='country'>
+            <div className={"country " + props.theme}>
                     <div className='countryData'>
                         <div className='countryHeader'>
                             <Link to="/"><BackBtn /></Link> 
@@ -29,7 +29,6 @@ const Country = () => {
                         <div className='countryDataDetail'>
                             <h2>{country.name?.common}</h2>
                             <div className='countryDataDetailMore'>
-                                
                                 <div className='mainInfo'>
                                     <p>Population: <span>{new Intl.NumberFormat().format(country.population)}</span></p>
                                     <p>Region: <span>{country.region}</span></p>
@@ -37,7 +36,6 @@ const Country = () => {
                                 </div>
                                 <div className='subInfo'>
                                     <p>Captial: <span>{country.capital?.[0]}</span></p>
-                                    {/* <p>Currencies: <span>{Object.values(country.currencies || {}).join(", ")}</span></p> */}
                                     <p>Languages: <span>{Object.values(country.languages || {}).join(", ")}</span></p>
                                     <p>Border Countries: <span>{Object.values(country.borders || {}).join(", ")}</span></p> 
                                 </div>

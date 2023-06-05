@@ -21,6 +21,6 @@
     width: 40vw;
     height: 4rem;
     font-size: 1.3rem;
-    border: 5px solid hsl(0, 0%, 98%);
+    border: none;
     padding-left: 4rem;
 }

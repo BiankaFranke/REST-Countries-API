@@ -4,11 +4,11 @@ import '../../App.css';
 
 const CountryCard = (props) => {
     return (
-        <Link to={`/${props.name}`} className='LinkRoutes CountryCard'>
+        <Link to={`/${props.name}`} className={"LinkRoutes CountryCard " + props.theme + "Other"}>
             <div className='flag'>
                 <img src={props.src} alt={`${props.name?.common} Flag`} />
             </div>
-            <div className='countryData'>
+            <div className="countryData">
                 <h2 className="name">{props.name}</h2>
                 <p className='population'>Population: <span>{props.population}</span></p>
                 <p className='region'>Region: <span>{props.region}</span></p>

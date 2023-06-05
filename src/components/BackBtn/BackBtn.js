@@ -4,9 +4,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import './BackBtn.css';
 import '../../App.css';
 
-const BackBtn = () => {
+const BackBtn = (props) => {
     return (
-        <div className="BackBtn">
+        <div className={"BackBtn " + props.theme + "Other"}>
             <button id="btnBack"><FontAwesomeIcon icon={faArrowLeft} /> Back</button>
         </div>
     );

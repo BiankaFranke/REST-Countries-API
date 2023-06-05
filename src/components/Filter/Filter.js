@@ -1,18 +1,17 @@
 import './Filter.css';
 import '../../App.css';
 
-const Filter = ({ selectedRegion }) => {
-
-    const handleClick = (e) => {
+const Filter = ({ selectedRegion }, props) => {
+        const handleClick = (e) => {
         e.preventDefault();
         const regionName = e.target.value;
         selectedRegion(regionName);
     }
 
     return (
-        <div className='Filter'>
+        <div className={"Filter " + props.theme + "Other"}>
             <select onChange={handleClick}>
-                <option className="option">Filter by Region</option>
+                <option className="option" value="" disabled selected>Filter by Region</option>
                 <option className="option" value="Africa">
                     Africa
                 </option>

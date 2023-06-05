@@ -5,12 +5,45 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Nunito Sans';
-  background-color: hsl(0, 0%, 98%);
-  color: hsl(200, 15%, 8%);
   min-height: 100vh;
 }
 
 .LinkRoutes {
   text-decoration: none;
-  color: hsl(200, 15%, 8%);
+}
+
+.light {
+  background-color: hsl(0, 0%, 98%) !important;
+}
+
+.light button, .light h1, .light .LinkRoutes:visited, .light .LinkRoutes:link {
+  color: hsl(200, 15%, 8%) !important;
+}
+
+.dark {
+  background-color: hsl(207, 26%, 17%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.dark button, .dark h1, .dark .LinkRoutes:visited, .dark .LinkRoutes:link {
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.lightOther {
+  background-color: hsl(0, 0%, 100%) !important;
+  
+}
+
+.lightOther p {
+  color: hsl(200, 15%, 8%) !important;
+}
+
+.darkOther {
+  background-color: hsl(209, 23%, 22%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.dark #btnBack, .dark input, .dark select, .dark ::placeholder {
+  background-color: hsl(209, 23%, 22%) !important;
+  color: hsl(0, 0%, 100%) !important;
 }

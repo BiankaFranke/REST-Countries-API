@@ -1,8 +1,7 @@
-.Header {
+#Header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(0, 0%, 100%);
     width: 100%;
     height: 10vh;
     text-decoration: none;
@@ -16,12 +15,31 @@
     font-size: 1rem;
 }
 
-.Logo:visited {
-    color: blue;
+#sun {
+    display: none;
+}
+
+#moon img, #sun img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.themeMode {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 @media only screen and (min-width:599px) {
     .Logo h1 {
+        font-size: 2rem;
+    }
+
+    #themeMode {
         font-size: 2rem;
     }
 }

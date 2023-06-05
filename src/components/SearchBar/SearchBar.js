@@ -2,17 +2,16 @@ import { useState } from "react";
 import './SearchBar.css';
 import '../../App.css';
 
-const SearchBar = ({ searchedCountry }) => {
+const SearchBar = ({ searchedCountry }, props) => {
     const [query, setQuery] = useState("");
 
-    const changeHandler = (e) => {
+    const changeHandler = async (e) => {
         e.preventDefault()
         searchedCountry(query);
-        console.log(query)
     }
 
     return (
-        <div className='SearchBar'>
+        <div className={"SearchBar " + props.theme + "Other"}>
             <form onSubmit={changeHandler}>
                 <button 
                     className="Search-Function"
